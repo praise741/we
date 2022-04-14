@@ -8,6 +8,7 @@ use Illuminate\Support\Str;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,7 +22,7 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'oluwamuyiwa praise',
             'email' => 'kanyinsayopraise@gmail.com',
-            'password' =>'password',
+            'password' =>Hash::make('password'),
         ]);
     }
 }
